@@ -1,0 +1,37 @@
+{
+    "modName": "More Legendary Effects",
+    "displayName": "More Legendary Effects",
+    "minMcmVersion": 2,
+    "content": [
+        {
+            "text": "Aristocrat's",
+            "type": "switcher",
+            "help": "Grants increasing energy and damage resistance the higher your caps (up to +20)",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "AristocratsEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Vanguard's",
+            "type": "switcher",
+            "help": "Grants increasing energy and damage resistance the higher your health (up to +35)",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "VanguardsEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        }
+    ]
+}

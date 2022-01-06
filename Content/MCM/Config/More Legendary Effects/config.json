@@ -19,6 +19,51 @@
             }
         },
         {
+            "text": "Dissipating",
+            "type": "switcher",
+            "help": "Slowly regenerate radiation damage while not in combat",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "DissipatingEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Nocturnal",
+            "type": "switcher",
+            "help": "Grants +40 energy and damage resistance at night",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "NocturnalEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Regenerating",
+            "type": "switcher",
+            "help": "Slowly regenerate health while not in combat",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "RegeneratingEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Vanguard's",
             "type": "switcher",
             "help": "Grants increasing energy and damage resistance the higher your health (up to +35)",

@@ -7,6 +7,15 @@ LegendaryItemQuestScript Property LegendaryItemQuest const auto mandatory
 bool Property AristocratsEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property AristocratsModRule Const Auto Mandatory
 
+bool Property DissipatingEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property DissipatingModRule Const Auto Mandatory
+
+bool Property NocturnalEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property NocturnalModRule Const Auto Mandatory
+
+bool Property RegeneratingEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property RegeneratingModRule Const Auto Mandatory
+
 bool Property VanguardsEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property VanguardsModRule Const Auto Mandatory
 
@@ -16,6 +25,9 @@ EndEvent
 
 Function UpdateLegendaryModRules()
 	UpdateModRule("Aristocrat's", AristocratsEnabled, AristocratsModRule)
+	UpdateModRule("Dissipating", DissipatingEnabled, DissipatingModRule)
+	UpdateModRule("Nocturnal", NocturnalEnabled, NocturnalModRule)
+	UpdateModRule("Regenerating", RegeneratingEnabled, RegeneratingModRule)
 	UpdateModRule("Vanguard's", VanguardsEnabled, VanguardsModRule)
 EndFunction
 

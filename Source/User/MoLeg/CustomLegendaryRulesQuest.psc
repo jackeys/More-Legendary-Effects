@@ -13,11 +13,17 @@ LegendaryItemQuestScript:LegendaryModRule Property DissipatingModRule Const Auto
 bool Property HazmatEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property HazmatModRule Const Auto Mandatory
 
+bool Property HoardersEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property HoardersModRule Const Auto Mandatory
+
 bool Property NocturnalEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property NocturnalModRule Const Auto Mandatory
 
 bool Property RegeneratingEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property RegeneratingModRule Const Auto Mandatory
+
+bool Property TravelersEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property TravelersModRule Const Auto Mandatory
 
 bool Property VanguardsEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property VanguardsModRule Const Auto Mandatory
@@ -33,8 +39,10 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Aristocrat's", AristocratsEnabled, AristocratsModRule)
 	UpdateModRule("Dissipating", DissipatingEnabled, DissipatingModRule)
 	UpdateModRule("Hazmat", HazmatEnabled, HazmatModRule)
+	UpdateModRule("Hoarder's", HoardersEnabled, HoardersModRule)
 	UpdateModRule("Nocturnal", NocturnalEnabled, NocturnalModRule)
 	UpdateModRule("Regenerating", RegeneratingEnabled, RegeneratingModRule)
+	UpdateModRule("Traveler's", TravelersEnabled, TravelersModRule)
 	UpdateModRule("Vanguard's", VanguardsEnabled, VanguardsModRule)
 	UpdateModRule("Weightless", WeightlessEnabled, WeightlessModRule)
 EndFunction

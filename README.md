@@ -5,7 +5,31 @@ Name                  | Armor Type                                  | Origin    
 Aristocrat's          | Normal and power armor                      | Fallout 76       | Grants increasing energy and damage resistance the higher your caps (up to +20) 
 Dissipating           | Normal and power armor                      | Fallout 76       | Slowly regenerate radiation damage while not in combat
 Hazmat                | Normal and power armor                      | Fallout 76       | +25 Radiation Resistance
+Hoarder's             | Normal and power armor                      | Original         | Grants increasing energy and damage resistance the closer you are to your carrying capacity (up to +20)
 Nocturnal             | Normal and power armor                      | Fallout 76       | Grants +40 energy and damage resistance at night
 Regenerating          | Normal and power armor                      | Fallout 76       | Slowly regenerate health while not in combat
+Traveler's            | Normal and power armor (excluding legs)     | Original         | Increases movement speed by up to 10%, the less you are carrying
 Vanguard's            | Normal and power armor                      | Fallout 76       | Grants increasing energy and damage resistance the higher your health (up to +35)
 Weightless            | Normal armor                                | Fallout 76       | Weighs 90% less
+
+## Hoarder's Effect
+
+**Requires F4SE**
+
+Resistances are added at the following carrying capacity percentages:
+* 80% - +4
+* 85% - +8
+* 90% - +12
+* 95% - +16
+* 100% or more - +20
+
+## Traveler's Effect
+
+**Requires F4SE**
+
+Movement speed increases at the following carrying capacity percentages:
+* 70% - +2% movement speed
+* 65% - +4% movement speed
+* 60% - +6% movement speed
+* 55% - +8% movement speed
+* 50% or lower - +10% movement speed

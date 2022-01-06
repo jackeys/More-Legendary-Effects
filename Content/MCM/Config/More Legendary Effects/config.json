@@ -49,6 +49,21 @@
             }
         },
         {
+            "text": "Hoarder's",
+            "type": "switcher",
+            "help": "Grants increasing energy and damage resistance the closer you are to your carrying capacity (up to +20)",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "HoardersEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Nocturnal",
             "type": "switcher",
             "help": "Grants +40 energy and damage resistance at night",
@@ -71,6 +86,21 @@
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",
                 "propertyName": "RegeneratingEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Traveler's",
+            "type": "switcher",
+            "help": "Increases movement speed by up to 10%, the less you are carrying",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "TravelersEnabled"
             },
             "action": {
                 "type": "CallFunction",

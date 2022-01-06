@@ -34,6 +34,21 @@
             }
         },
         {
+            "text": "Hazmat",
+            "type": "switcher",
+            "help": "+25 Radiation Resistance",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "HazmatEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Nocturnal",
             "type": "switcher",
             "help": "Grants +40 energy and damage resistance at night",
@@ -71,6 +86,21 @@
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",
                 "propertyName": "VanguardsEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Weightless",
+            "type": "switcher",
+            "help": "Weighs 90% less",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "WeightlessEnabled"
             },
             "action": {
                 "type": "CallFunction",

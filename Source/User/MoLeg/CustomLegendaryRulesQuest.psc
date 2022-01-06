@@ -10,6 +10,9 @@ LegendaryItemQuestScript:LegendaryModRule Property AristocratsModRule Const Auto
 bool Property DissipatingEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property DissipatingModRule Const Auto Mandatory
 
+bool Property HazmatEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property HazmatModRule Const Auto Mandatory
+
 bool Property NocturnalEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property NocturnalModRule Const Auto Mandatory
 
@@ -19,6 +22,9 @@ LegendaryItemQuestScript:LegendaryModRule Property RegeneratingModRule Const Aut
 bool Property VanguardsEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property VanguardsModRule Const Auto Mandatory
 
+bool Property WeightlessEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property WeightlessModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	UpdateLegendaryModRules()
 EndEvent
@@ -26,9 +32,11 @@ EndEvent
 Function UpdateLegendaryModRules()
 	UpdateModRule("Aristocrat's", AristocratsEnabled, AristocratsModRule)
 	UpdateModRule("Dissipating", DissipatingEnabled, DissipatingModRule)
+	UpdateModRule("Hazmat", HazmatEnabled, HazmatModRule)
 	UpdateModRule("Nocturnal", NocturnalEnabled, NocturnalModRule)
 	UpdateModRule("Regenerating", RegeneratingEnabled, RegeneratingModRule)
 	UpdateModRule("Vanguard's", VanguardsEnabled, VanguardsModRule)
+	UpdateModRule("Weightless", WeightlessEnabled, WeightlessModRule)
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

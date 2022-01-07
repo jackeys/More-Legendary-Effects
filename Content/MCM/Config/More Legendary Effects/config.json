@@ -34,6 +34,21 @@
             }
         },
         {
+            "text": "Doctor's",
+            "type": "switcher",
+            "help": "Stimpaks, RadAway, and Rad-X are 5% more effective",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "DoctorsEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Hardy",
             "type": "switcher",
             "help": "Receive 7% less damage from explosions",

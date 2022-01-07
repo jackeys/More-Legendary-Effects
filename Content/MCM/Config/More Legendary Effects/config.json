@@ -34,6 +34,21 @@
             }
         },
         {
+            "text": "Hardy",
+            "type": "switcher",
+            "help": "Receive 7% less damage from explosions",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "HardyEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Hazmat",
             "type": "switcher",
             "help": "+25 Radiation Resistance",

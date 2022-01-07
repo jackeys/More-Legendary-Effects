@@ -4,6 +4,7 @@ Name                  | Armor Type                                  | Origin    
 --------------------- | ------------------------------------------- | ---------------- | -----------
 Aristocrat's          | Normal and power armor                      | Fallout 76       | Grants increasing energy and damage resistance the higher your caps (up to +20) 
 Dissipating           | Normal and power armor                      | Fallout 76       | Slowly regenerate radiation damage while not in combat
+Hardy                 | Normal and power armor                      | Fallout 76       | Receive 7% less damage from explosions
 Hazmat                | Normal and power armor                      | Fallout 76       | +25 Radiation Resistance
 Hoarder's             | Normal and power armor                      | Original         | Grants increasing energy and damage resistance the closer you are to your carrying capacity (up to +20)
 Nocturnal             | Normal and power armor                      | Fallout 76       | Grants +40 energy and damage resistance at night

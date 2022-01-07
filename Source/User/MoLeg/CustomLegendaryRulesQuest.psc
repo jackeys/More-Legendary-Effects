@@ -10,6 +10,9 @@ LegendaryItemQuestScript:LegendaryModRule Property AristocratsModRule Const Auto
 bool Property DissipatingEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property DissipatingModRule Const Auto Mandatory
 
+bool Property HardyEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property HardyModRule Const Auto Mandatory
+
 bool Property HazmatEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property HazmatModRule Const Auto Mandatory
 
@@ -41,6 +44,7 @@ EndEvent
 Function UpdateLegendaryModRules()
 	UpdateModRule("Aristocrat's", AristocratsEnabled, AristocratsModRule)
 	UpdateModRule("Dissipating", DissipatingEnabled, DissipatingModRule)
+	UpdateModRule("Hardy", HardyEnabled, HardyModRule)
 	UpdateModRule("Hazmat", HazmatEnabled, HazmatModRule)
 	UpdateModRule("Hoarder's", HoardersEnabled, HoardersModRule)
 	UpdateModRule("Nocturnal", NocturnalEnabled, NocturnalModRule)

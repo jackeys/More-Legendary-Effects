@@ -4,6 +4,13 @@ Scriptname MoLeg:CustomLegendaryRulesQuest extends Quest
 LegendaryItemQuestScript Property LegendaryItemQuest const auto mandatory
 {Autofill}
 
+Struct NamingRuleMerge
+	InstanceNamingRules Source
+	InstanceNamingRules Destination
+EndStruct
+
+NamingRuleMerge[] Property NamingRules Const Auto Mandatory
+
 bool Property AristocratsEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property AristocratsModRule Const Auto Mandatory
 
@@ -41,8 +48,18 @@ bool Property WeightlessEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property WeightlessModRule Const Auto Mandatory
 
 Event OnQuestInit()
+	MergeNamingRules()
 	UpdateLegendaryModRules()
 EndEvent
+
+Function MergeNamingRules()
+	int i = 0
+	while i < NamingRules.Length
+		debug.trace(self + " merging naming rules - Source: " + NamingRules[i].Source + " | Destination: " + NamingRules[i].Destination)
+		NamingRules[i].Destination.MergeWith(NamingRules[i].Source)
+		i += 1
+	EndWhile
+EndFunction
 
 Function UpdateLegendaryModRules()
 	UpdateModRule("Aristocrat's", AristocratsEnabled, AristocratsModRule)

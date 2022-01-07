@@ -94,6 +94,21 @@
             }
         },
         {
+            "text": "Sneaking",
+            "type": "switcher",
+            "help": "Become harder to detect while sneaking",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "SneakingEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Traveler's",
             "type": "switcher",
             "help": "Increases movement speed by up to 10%, the less you are carrying",

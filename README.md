@@ -8,9 +8,12 @@ Hazmat                | Normal and power armor                      | Fallout 76
 Hoarder's             | Normal and power armor                      | Original         | Grants increasing energy and damage resistance the closer you are to your carrying capacity (up to +20)
 Nocturnal             | Normal and power armor                      | Fallout 76       | Grants +40 energy and damage resistance at night
 Regenerating          | Normal and power armor                      | Fallout 76       | Slowly regenerate health while not in combat
+Sneaking              | Normal armor                                | Fallout 76       | Become harder to detect while sneaking
 Traveler's            | Normal and power armor (excluding legs)     | Original         | Increases movement speed by up to 10%, the less you are carrying
 Vanguard's            | Normal and power armor                      | Fallout 76       | Grants increasing energy and damage resistance the higher your health (up to +35)
 Weightless            | Normal armor                                | Fallout 76       | Weighs 90% less
+
+* In order for legendary effects to apply to power armor, you need a mod that allows for legendary power armor, such as [Power Armor to the People](https://www.nexusmods.com/fallout4/mods/50819)
 
 ## Hoarder's Effect
 

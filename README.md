@@ -1,5 +1,7 @@
 # More Legendary Effects
 
+## Armor
+
 Name                  | Armor Type                                  | Origin           | Description
 --------------------- | ------------------------------------------- | ---------------- | -----------
 Aristocrat's          | Normal and power armor                      | Fallout 76       | Grants increasing energy and damage resistance the higher your caps (up to +20) 
@@ -19,7 +21,7 @@ Weightless            | Normal armor                                | Fallout 76
 
 * In order for legendary effects to apply to power armor, you need a mod that allows for legendary power armor, such as [Power Armor to the People](https://www.nexusmods.com/fallout4/mods/50819)
 
-## Hoarder's Effect
+### Hoarder's Effect
 
 **Requires F4SE**
 
@@ -30,7 +32,7 @@ Resistances are added at the following carrying capacity percentages:
 * 95% - +16
 * 100% or more - +20
 
-## Traveler's Effect
+### Traveler's Effect
 
 **Requires F4SE**
 
@@ -40,3 +42,9 @@ Movement speed increases at the following carrying capacity percentages:
 * 60% - +6% movement speed
 * 55% - +8% movement speed
 * 50% or lower - +10% movement speed
+
+## Weapons
+
+Name                  | Armor Type                                  | Origin           | Description
+--------------------- | ------------------------------------------- | ---------------- | -----------
+Lightweight           | All                                         | Fallout 76       | Weighs 90% less

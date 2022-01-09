@@ -4,6 +4,10 @@
     "minMcmVersion": 2,
     "content": [
         {
+            "text": "Armor",
+            "type": "section"
+        },
+        {
             "text": "Aristocrat's",
             "type": "switcher",
             "help": "Grants increasing energy and damage resistance the higher your caps (up to +20)",
@@ -206,6 +210,25 @@
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",
                 "propertyName": "WeightlessEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Weapons",
+            "type": "section"
+        },
+        {
+            "text": "Lightweight",
+            "type": "switcher",
+            "help": "Weighs 90% less",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "LightweightEnabled"
             },
             "action": {
                 "type": "CallFunction",

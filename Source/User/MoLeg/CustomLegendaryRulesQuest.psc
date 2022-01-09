@@ -20,6 +20,9 @@ LegendaryItemQuestScript:LegendaryModRule Property DissipatingModRule Const Auto
 bool Property DoctorsEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property DoctorsModRule Const Auto Mandatory
 
+bool Property ElectrifiedEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property ElectrifiedModRule Const Auto Mandatory
+
 bool Property HardyEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property HardyModRule Const Auto Mandatory
 
@@ -67,7 +70,8 @@ EndFunction
 Function UpdateLegendaryModRules()
 	UpdateModRule("Aristocrat's", AristocratsEnabled, AristocratsModRule)
 	UpdateModRule("Dissipating", DissipatingEnabled, DissipatingModRule)
-	UpdateModRule("Doctors", DoctorsEnabled, DoctorsModRule)
+	UpdateModRule("Doctor's", DoctorsEnabled, DoctorsModRule)
+	UpdateModRule("Electrified", ElectrifiedEnabled, ElectrifiedModRule)
 	UpdateModRule("Hardy", HardyEnabled, HardyModRule)
 	UpdateModRule("Hazmat", HazmatEnabled, HazmatModRule)
 	UpdateModRule("Hoarder's", HoardersEnabled, HoardersModRule)

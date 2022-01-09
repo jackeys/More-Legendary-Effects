@@ -49,6 +49,21 @@
             }
         },
         {
+            "text": "Electrified",
+            "type": "switcher",
+            "help": "5% chance to deal 100 Energy damage to melee attackers",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "ElectrifiedEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Hardy",
             "type": "switcher",
             "help": "Receive 7% less damage from explosions",
@@ -141,7 +156,7 @@
         {
             "text": "Toxic",
             "type": "switcher",
-            "help": "5% chance to deal 100 Poison DMG to melee attackers",
+            "help": "5% chance to deal 100 Poison damage to melee attackers",
             "valueOptions": {
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",

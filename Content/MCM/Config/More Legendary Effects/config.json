@@ -139,6 +139,21 @@
             }
         },
         {
+            "text": "Toxic",
+            "type": "switcher",
+            "help": "5% chance to deal 100 Poison DMG to melee attackers",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "ToxicEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Traveler's",
             "type": "switcher",
             "help": "Increases movement speed by up to 10%, the less you are carrying",

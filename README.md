@@ -11,6 +11,7 @@ Hoarder's             | Normal and power armor                      | Original  
 Nocturnal             | Normal and power armor                      | Fallout 76       | Grants +40 energy and damage resistance at night
 Regenerating          | Normal and power armor                      | Fallout 76       | Slowly regenerate health while not in combat
 Sneaking              | Normal armor                                | Fallout 76       | Become harder to detect while sneaking
+Toxic                 | Normal and power armor                      | Fallout 76       | 5% chance to deal 100 Poison damage to melee attackers
 Traveler's            | Normal and power armor (excluding legs)     | Original         | Increases movement speed by up to 10%, the less you are carrying
 Vanguard's            | Normal and power armor                      | Fallout 76       | Grants increasing energy and damage resistance the higher your health (up to +35)
 Weightless            | Normal armor                                | Fallout 76       | Weighs 90% less

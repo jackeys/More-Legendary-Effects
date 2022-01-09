@@ -38,6 +38,9 @@ LegendaryItemQuestScript:LegendaryModRule Property RegeneratingModRule Const Aut
 bool Property SneakingEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property SneakingModRule Const Auto Mandatory
 
+bool Property ToxicEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property ToxicModRule Const Auto Mandatory
+
 bool Property TravelersEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property TravelersModRule Const Auto Mandatory
 
@@ -71,6 +74,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Nocturnal", NocturnalEnabled, NocturnalModRule)
 	UpdateModRule("Regenerating", RegeneratingEnabled, RegeneratingModRule)
 	UpdateModRule("Sneaking", SneakingEnabled, SneakingModRule)
+	UpdateModRule("Toxic", ToxicEnabled, ToxicModRule)
 	UpdateModRule("Traveler's", TravelersEnabled, TravelersModRule)
 	UpdateModRule("Vanguard's", VanguardsEnabled, VanguardsModRule)
 	UpdateModRule("Weightless", WeightlessEnabled, WeightlessModRule)

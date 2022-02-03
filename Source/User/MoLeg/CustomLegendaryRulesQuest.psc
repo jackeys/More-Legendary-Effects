@@ -73,6 +73,15 @@ LegendaryItemQuestScript:LegendaryModRule Property BashersWeaponModRule Const Au
 bool Property ExecutionersWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property ExecutionersWeaponModRule Const Auto Mandatory
 
+bool Property JuggernautsWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property JuggernautsWeaponModRule Const Auto Mandatory
+
+bool Property HoardersWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property HoardersWeaponModRule Const Auto Mandatory
+
+bool Property SteadyWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property SteadyWeaponModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	MergeNamingRules()
 	UpdateLegendaryModRules()
@@ -110,6 +119,9 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Aristocrat's (Weapon)", AristocratsWeaponEnabled, AristocratsWeaponModRule)
 	UpdateModRule("Basher's (Weapon)", BashersWeaponEnabled, BashersWeaponModRule)
 	UpdateModRule("Executioner's (Weapon)", ExecutionersWeaponEnabled, ExecutionersWeaponModRule)
+	UpdateModRule("Juggernaut's (Weapon)", JuggernautsWeaponEnabled, JuggernautsWeaponModRule)
+	UpdateModRule("Hoarder's (Weapon)", HoardersWeaponEnabled, HoardersWeaponModRule)
+	UpdateModRule("Steady (Weapon)", SteadyWeaponEnabled, SteadyWeaponModRule)
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

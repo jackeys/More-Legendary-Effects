@@ -47,7 +47,10 @@ Movement speed increases at the following carrying capacity percentages:
 
 Name                  | Weapon Type                                 | Origin           | Description
 --------------------- | ------------------------------------------- | ---------------- | -----------
-Aristocrat's          | All                                         | Fallout 76       | Does up to 50% more damage, increasing with how many caps you have
+Aristocrat's          | All                                         | Fallout 76       | Deal increasing damage the higher your caps (up to +50%)
 Basher's              | Ranged                                      | Fallout 76       | Bashing damage increased by 50%
 Executioner's         | All                                         | Fallout 76       | Deal 50% more damage when your target is below 40% health
+Hoarder's             | All                                         | Original         | Deal increasing damage the closer you are to your carrying capacity (up to +35%)
+Juggernaut's          | All                                         | Fallout 76       | Deal increasing damage the higher your health (up to +35%)
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less
+Steady                | Melee and Unarmed                           | Fallout 76       | Deal 40% more damage while standing still

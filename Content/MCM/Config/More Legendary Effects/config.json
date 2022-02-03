@@ -224,7 +224,7 @@
         {
             "text": "Aristocrat's",
             "type": "switcher",
-            "help": "Does up to 50% more damage, increasing with how many caps you have",
+            "help": "Deal increasing damage the higher your caps (up to +50%)",
             "valueOptions": {
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",
@@ -267,6 +267,36 @@
             }
         },
         {
+            "text": "Hoarder's",
+            "type": "switcher",
+            "help": "Deal increasing damage the closer you are to your carrying capacity (up to +35%)",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "HoardersWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Juggernaut's",
+            "type": "switcher",
+            "help": "Deal increasing damage the higher your health (up to +35%)",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "JuggernautsWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Lightweight",
             "type": "switcher",
             "help": "Weighs 90% less",
@@ -274,6 +304,21 @@
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",
                 "propertyName": "LightweightEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Steady (Melee Only)",
+            "type": "switcher",
+            "help": "Deal 40% more damage while standing still",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "SteadyWeaponEnabled"
             },
             "action": {
                 "type": "CallFunction",

@@ -54,3 +54,50 @@ Hoarder's             | All                                         | Original  
 Juggernaut's          | All                                         | Fallout 76       | Deal increasing damage the higher your health (up to +35%)
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less
 Steady                | Melee and Unarmed                           | Fallout 76       | Deal 40% more damage while standing still
+
+### Juggernaut Effect
+
+The Juggernaut effect differs from the Fallout 76 version, giving a higher maximum damage boost. The Fallout 76 version was weaker than the Powerful effect (+25% damage), so Juggernaut would have been strictly worse without these changes.
+
+These are the damage increases at each health percentage:
+
+Health | Damage Increase
+------ | ---------------
+5%     | 1%
+10%    | 3%
+15%    | 5%
+20%    | 7%
+25%    | 9%
+30%    | 10%
+35%    | 12%
+40%    | 14%
+45%    | 16%
+50%    | 18%
+55%    | 19%
+60%    | 21%
+65%    | 23%
+70%    | 25%
+75%    | 27%
+80%    | 28%
+85%    | 30%
+90%    | 32%
+95%    | 34%
+100%   | 35%
+
+### Hoarder's Effect
+
+**Requires F4SE**
+
+Carry Weight | Damage Increase
+------------ | ---------------
+50%          | 3%
+55%          | 6%
+60%          | 9%
+65%          | 12%
+70%          | 15%
+75%          | 18%
+80%          | 21%
+85%          | 25%
+90%          | 28%
+95%          | 32%
+100%         | 35%

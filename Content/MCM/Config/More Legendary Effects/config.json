@@ -252,6 +252,21 @@
             }
         },
         {
+            "text": "Executioner's",
+            "type": "switcher",
+            "help": "Deal 50% more damage when your target is below 40% health",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "ExecutionersWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Lightweight",
             "type": "switcher",
             "help": "Weighs 90% less",

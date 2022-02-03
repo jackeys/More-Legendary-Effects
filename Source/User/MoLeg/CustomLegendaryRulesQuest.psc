@@ -70,6 +70,9 @@ LegendaryItemQuestScript:LegendaryModRule Property AristocratsWeaponModRule Cons
 bool Property BashersWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property BashersWeaponModRule Const Auto Mandatory
 
+bool Property ExecutionersWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property ExecutionersWeaponModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	MergeNamingRules()
 	UpdateLegendaryModRules()
@@ -106,6 +109,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Swift", SwiftEnabled, SwiftModRule)
 	UpdateModRule("Aristocrat's (Weapon)", AristocratsWeaponEnabled, AristocratsWeaponModRule)
 	UpdateModRule("Basher's (Weapon)", BashersWeaponEnabled, BashersWeaponModRule)
+	UpdateModRule("Executioner's (Weapon)", ExecutionersWeaponEnabled, ExecutionersWeaponModRule)
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

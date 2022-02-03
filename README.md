@@ -49,4 +49,5 @@ Name                  | Weapon Type                                 | Origin    
 --------------------- | ------------------------------------------- | ---------------- | -----------
 Aristocrat's          | All                                         | Fallout 76       | Does up to 50% more damage, increasing with how many caps you have
 Basher's              | Ranged                                      | Fallout 76       | Bashing damage increased by 50%
+Executioner's         | All                                         | Fallout 76       | Deal 50% more damage when your target is below 40% health
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less

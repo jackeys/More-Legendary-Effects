@@ -60,8 +60,12 @@ LegendaryItemQuestScript:LegendaryModRule Property WeightlessModRule Const Auto 
 bool Property LightweightEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property LightweightModRule Const Auto Mandatory
 
+; Disabled by default because it currently doesn't work
 bool Property SwiftEnabled = false Auto
 LegendaryItemQuestScript:LegendaryModRule Property SwiftModRule Const Auto Mandatory
+
+bool Property AristocratsWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property AristocratsWeaponModRule Const Auto Mandatory
 
 Event OnQuestInit()
 	MergeNamingRules()
@@ -79,7 +83,7 @@ EndFunction
 
 Function UpdateLegendaryModRules()
 	; Armor
-	UpdateModRule("Aristocrat's", AristocratsEnabled, AristocratsModRule)
+	UpdateModRule("Aristocrat's (Armor)", AristocratsEnabled, AristocratsModRule)
 	UpdateModRule("Dissipating", DissipatingEnabled, DissipatingModRule)
 	UpdateModRule("Doctor's", DoctorsEnabled, DoctorsModRule)
 	UpdateModRule("Electrified", ElectrifiedEnabled, ElectrifiedModRule)
@@ -97,6 +101,7 @@ Function UpdateLegendaryModRules()
 	; Weapons
 	UpdateModRule("Lightweight", LightweightEnabled, LightweightModRule)
 	UpdateModRule("Swift", SwiftEnabled, SwiftModRule)
+	UpdateModRule("Aristocrat's (Weapon)", AristocratsWeaponEnabled, AristocratsWeaponModRule)
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

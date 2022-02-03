@@ -47,4 +47,5 @@ Movement speed increases at the following carrying capacity percentages:
 
 Name                  | Armor Type                                  | Origin           | Description
 --------------------- | ------------------------------------------- | ---------------- | -----------
+Aristocrat's          | All                                         | Fallout 76       | Does up to 50% more damage, increasing with how many caps you have
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less

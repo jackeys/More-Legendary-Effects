@@ -222,6 +222,21 @@
             "type": "section"
         },
         {
+            "text": "Aristocrat's",
+            "type": "switcher",
+            "help": "Does up to 50% more damage, increasing with how many caps you have",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "AristocratsWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Lightweight",
             "type": "switcher",
             "help": "Weighs 90% less",

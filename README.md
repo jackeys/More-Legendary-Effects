@@ -53,7 +53,9 @@ Executioner's         | All                                         | Fallout 76
 Hoarder's             | All                                         | Original         | Deal increasing damage the closer you are to your carrying capacity (up to +35%)
 Juggernaut's          | All                                         | Fallout 76       | Deal increasing damage the higher your health (up to +35%)
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less
+Overpowering          | Melee and Unarmed                           | Fallout 76       | Power attacks do 40% more damage
 Steady                | Melee and Unarmed                           | Fallout 76       | Deal 40% more damage while standing still
+Undeterred            | Melee and Unarmed                           | Fallout 76       | Take 40% less damage while power attacking
 
 ### Juggernaut Effect
 

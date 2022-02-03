@@ -82,6 +82,12 @@ LegendaryItemQuestScript:LegendaryModRule Property HoardersWeaponModRule Const A
 bool Property SteadyWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property SteadyWeaponModRule Const Auto Mandatory
 
+bool Property OverpoweringWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property OverpoweringWeaponModRule Const Auto Mandatory
+
+bool Property UndeterredWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property UndeterredWeaponModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	MergeNamingRules()
 	UpdateLegendaryModRules()
@@ -122,6 +128,8 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Juggernaut's (Weapon)", JuggernautsWeaponEnabled, JuggernautsWeaponModRule)
 	UpdateModRule("Hoarder's (Weapon)", HoardersWeaponEnabled, HoardersWeaponModRule)
 	UpdateModRule("Steady (Weapon)", SteadyWeaponEnabled, SteadyWeaponModRule)
+	UpdateModRule("Overpowering (Weapon)", OverpoweringWeaponEnabled, OverpoweringWeaponModRule)
+	UpdateModRule("Undeterred (Weapon)", UndeterredWeaponEnabled, UndeterredWeaponModRule)
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

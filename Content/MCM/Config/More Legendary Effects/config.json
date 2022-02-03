@@ -312,6 +312,21 @@
             }
         },
         {
+            "text": "Overpowering (Melee Only)",
+            "type": "switcher",
+            "help": "Power attacks deal 40% more damage",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "OverpoweringWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Steady (Melee Only)",
             "type": "switcher",
             "help": "Deal 40% more damage while standing still",
@@ -319,6 +334,21 @@
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",
                 "propertyName": "SteadyWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Undeterred (Melee Only)",
+            "type": "switcher",
+            "help": "Take 40% less damage while power attacking",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "UndeterredWeaponEnabled"
             },
             "action": {
                 "type": "CallFunction",

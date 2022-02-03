@@ -45,7 +45,8 @@ Movement speed increases at the following carrying capacity percentages:
 
 ## Weapons
 
-Name                  | Armor Type                                  | Origin           | Description
+Name                  | Weapon Type                                 | Origin           | Description
 --------------------- | ------------------------------------------- | ---------------- | -----------
 Aristocrat's          | All                                         | Fallout 76       | Does up to 50% more damage, increasing with how many caps you have
+Basher's              | Ranged                                      | Fallout 76       | Bashing damage increased by 50%
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less

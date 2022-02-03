@@ -237,6 +237,21 @@
             }
         },
         {
+            "text": "Basher's (Guns Only)",
+            "type": "switcher",
+            "help": "Bashing damage increased by 50%",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "BashersWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Lightweight",
             "type": "switcher",
             "help": "Weighs 90% less",

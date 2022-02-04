@@ -327,6 +327,21 @@
             }
         },
         {
+            "text": "Riposting (Melee Only)",
+            "type": "switcher",
+            "help": "Reflects 50% of melee damage back while blocking",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "RipostingWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Steady (Melee Only)",
             "type": "switcher",
             "help": "Deal 40% more damage while standing still",

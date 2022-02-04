@@ -282,6 +282,21 @@
             }
         },
         {
+            "text": "Inertial",
+            "type": "switcher",
+            "help": "Replenish 15 AP with each kill",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "InertialWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Infuriating (Melee Only)",
             "type": "switcher",
             "help": "10% chance to knock back and frenzy the attacker on a successful block",

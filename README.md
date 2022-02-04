@@ -51,6 +51,7 @@ Aristocrat's          | All                                         | Fallout 76
 Basher's              | Ranged                                      | Fallout 76       | Bashing damage increased by 50%
 Executioner's         | All                                         | Fallout 76       | Deal 50% more damage when your target is below 40% health
 Hoarder's             | All                                         | Original         | Deal increasing damage the closer you are to your carrying capacity (up to +35%)
+Infuriating           | Melee and Unarmed                           | Fallout 76 (Cut) | 10% chance to knock back and frenzy the attacker on a successful block
 Juggernaut's          | All                                         | Fallout 76       | Deal increasing damage the higher your health (up to +35%)
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less
 Overpowering          | Melee and Unarmed                           | Fallout 76       | Power attacks do 40% more damage

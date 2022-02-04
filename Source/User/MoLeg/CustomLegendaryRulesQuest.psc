@@ -91,6 +91,9 @@ LegendaryItemQuestScript:LegendaryModRule Property UndeterredWeaponModRule Const
 bool Property RipostingWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property RipostingWeaponModRule Const Auto Mandatory
 
+bool Property InfuriatingWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property InfuriatingWeaponModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	MergeNamingRules()
 	UpdateLegendaryModRules()
@@ -134,6 +137,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Overpowering (Weapon)", OverpoweringWeaponEnabled, OverpoweringWeaponModRule)
 	UpdateModRule("Undeterred (Weapon)", UndeterredWeaponEnabled, UndeterredWeaponModRule)
 	UpdateModRule("Riposting (Weapon)", RipostingWeaponEnabled, RipostingWeaponModRule)
+	UpdateModRule("Infuriating (Weapon)", InfuriatingWeaponEnabled, InfuriatingWeaponModRule)
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

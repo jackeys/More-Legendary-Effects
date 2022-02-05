@@ -97,6 +97,9 @@ LegendaryItemQuestScript:LegendaryModRule Property InfuriatingWeaponModRule Cons
 bool Property InertialWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property InertialWeaponModRule Const Auto Mandatory
 
+bool Property VampiresWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property VampiresWeaponModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	MergeNamingRules()
 	UpdateLegendaryModRules()
@@ -136,6 +139,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Executioner's (Weapon)", ExecutionersWeaponEnabled, ExecutionersWeaponModRule)
 	UpdateModRule("Juggernaut's (Weapon)", JuggernautsWeaponEnabled, JuggernautsWeaponModRule)
 	UpdateModRule("Hoarder's (Weapon)", HoardersWeaponEnabled, HoardersWeaponModRule)
+	UpdateModRule("Vampire's (Weapon)", VampiresWeaponEnabled, VampiresWeaponModRule)
 	UpdateModRule("Steady (Weapon)", SteadyWeaponEnabled, SteadyWeaponModRule)
 	UpdateModRule("Overpowering (Weapon)", OverpoweringWeaponEnabled, OverpoweringWeaponModRule)
 	UpdateModRule("Undeterred (Weapon)", UndeterredWeaponEnabled, UndeterredWeaponModRule)

@@ -400,6 +400,21 @@
                 "form": "More Legendary Effects.esp|808",
                 "function": "UpdateLegendaryModRules"
             }
+        },
+        {
+            "text": "Vampire's",
+            "type": "switcher",
+            "help": "Gain brief health regeneration when you hit an enemy",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "VampiresWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
         }
     ]
 }

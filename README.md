@@ -59,6 +59,7 @@ Overpowering          | Melee and Unarmed                           | Fallout 76
 Riposting             | Melee and Unarmed                           | Fallout 76       | Reflects 50% of melee damage back while blocking
 Steady                | Melee and Unarmed                           | Fallout 76       | Deal 40% more damage while standing still
 Undeterred            | Melee and Unarmed                           | Fallout 76       | Take 40% less damage while power attacking
+Vampire's             | All                                         | Fallout 76       | Gain brief health regeneration when you hit an enemy
 
 ### Juggernaut Effect
 

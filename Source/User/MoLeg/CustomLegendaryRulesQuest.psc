@@ -103,6 +103,9 @@ LegendaryItemQuestScript:LegendaryModRule Property VampiresWeaponModRule Const A
 bool Property GhostsWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property GhostsWeaponModRule Const Auto Mandatory
 
+bool Property SuppressorsWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property SuppressorsWeaponModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	MergeNamingRules()
 	UpdateLegendaryModRules()
@@ -144,6 +147,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Hoarder's (Weapon)", HoardersWeaponEnabled, HoardersWeaponModRule)
 	UpdateModRule("Vampire's (Weapon)", VampiresWeaponEnabled, VampiresWeaponModRule)
 	UpdateModRule("Ghost's (Weapon)", GhostsWeaponEnabled, GhostsWeaponModRule)
+	UpdateModRule("Suppressor's (Weapon)", SuppressorsWeaponEnabled, SuppressorsWeaponModRule)
 	UpdateModRule("Steady (Weapon)", SteadyWeaponEnabled, SteadyWeaponModRule)
 	UpdateModRule("Overpowering (Weapon)", OverpoweringWeaponEnabled, OverpoweringWeaponModRule)
 	UpdateModRule("Undeterred (Weapon)", UndeterredWeaponEnabled, UndeterredWeaponModRule)

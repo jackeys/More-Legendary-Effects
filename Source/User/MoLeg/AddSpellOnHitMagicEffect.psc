@@ -5,7 +5,7 @@ Spell Property SpellToApply Auto Const Mandatory
 {The spell that should be applied to the target of the attack}
 
 ActorValue Property SpellChanceAV Auto Const
-{An actor value that governs the chance that the spell will be added when the target is hit - overrides SpellChance if provided}
+{An actor value that governs the chance that the spell will be added when the target is hit - if omitted, the chance is 100%}
 
 float Property AutomaticWeaponChanceModifier = 1.0 Auto Const
 {Multiplier for spell chance if the weapon is an automatic weapon}
@@ -24,11 +24,21 @@ bool Property ApplySpellToAggressor = false Auto Const
 
 bool Property IgnoreMeleeAttacks = false Auto Const
 
+bool Property OnlyRegisterHitsFromCaster = false Auto Const
+
 Event OnEffectStart(Actor akTarget, Actor akCaster)
-	RegisterForHitEvent(akTarget)
+	if OnlyRegisterHitsFromCaster
+		RegisterForHitEvent(akTarget, akAggressorFilter = akCaster)
+	else
+		RegisterForHitEvent(akTarget)
+	endIf
 EndEvent
 
 Event OnHit(ObjectReference akTarget, ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, bool abBashAttack, bool abHitBlocked, string apMaterial)
+	if !IsBoundGameObjectAvailable()
+		return
+	endIf
+	
 	Weapon sourceWeapon = akSource as Weapon
 	Actor targetActor = akTarget as Actor
 	if (!IgnoreMeleeAttacks || akProjectile) && sourceWeapon && targetActor && WeaponShouldBeIncluded(sourceWeapon) && Utility.RandomFloat(0, 100) <= GetSpellChance(akTarget, sourceWeapon)
@@ -41,7 +51,11 @@ Event OnHit(ObjectReference akTarget, ObjectReference akAggressor, Form akSource
 		SpellToApply.Cast(akTarget, spellTarget)
 	endIf
 	
-	RegisterForHitEvent(akTarget)
+	if OnlyRegisterHitsFromCaster
+		RegisterForHitEvent(akTarget, akAggressorFilter = GetCasterActor())
+	else
+		RegisterForHitEvent(akTarget)
+	endIf
 EndEvent
 
 Event OnEffectFinish(Actor akTarget, Actor akCaster)
@@ -49,9 +63,15 @@ Event OnEffectFinish(Actor akTarget, Actor akCaster)
 	if targetActor && !ApplySpellToAggressor
 		targetActor.RemoveSpell(SpellToApply)
 	endIf
+
+	UnregisterForAllHitEvents()
 EndEvent
 
 float Function GetSpellChance(ObjectReference akTarget, Weapon akSourceWeapon)
+	if !SpellChanceAV
+		return 100.0
+	endIf
+
 	float adjustedSpellChance = akTarget.GetValue(SpellChanceAV)
 
 	if akSourceWeapon.HasKeyword(WeaponTypeAutomatic)

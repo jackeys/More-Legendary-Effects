@@ -59,6 +59,7 @@ Lightweight           | All                                         | Fallout 76
 Overpowering          | Melee and Unarmed                           | Fallout 76       | Power attacks do 40% more damage
 Riposting             | Melee and Unarmed                           | Fallout 76       | Reflects 50% of melee damage back while blocking
 Steady                | Melee and Unarmed                           | Fallout 76       | Deal 40% more damage while standing still
+Suppressor's          | All                                         | Fallout 76       | Reduce your target's damage output by 25% for 5 seconds
 Undeterred            | Melee and Unarmed                           | Fallout 76       | Take 40% less damage while power attacking
 Vampire's             | All                                         | Fallout 76       | Gain brief health regeneration when you hit an enemy
 

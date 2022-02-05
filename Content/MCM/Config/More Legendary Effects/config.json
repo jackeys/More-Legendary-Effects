@@ -267,6 +267,21 @@
             }
         },
         {
+            "text": "Ghost's (Guns Only)",
+            "type": "switcher",
+            "help": "Hits have a 10% chance to generate a Stealth Field for 2 seconds",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "GhostsWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Hoarder's",
             "type": "switcher",
             "help": "Deal increasing damage the closer you are to your carrying capacity (up to +35%)",

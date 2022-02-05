@@ -50,6 +50,7 @@ Name                  | Weapon Type                                 | Origin    
 Aristocrat's          | All                                         | Fallout 76       | Deal increasing damage the higher your caps (up to +50%)
 Basher's              | Ranged                                      | Fallout 76       | Bashing damage increased by 50%
 Executioner's         | All                                         | Fallout 76       | Deal 50% more damage when your target is below 40% health
+Ghost's               | Ranged                                      | Fallout 76       | Hits have a 10% chance to generate a Stealth Field for 2 seconds
 Hoarder's             | All                                         | Original         | Deal increasing damage the closer you are to your carrying capacity (up to +35%)
 Inertial              | All                                         | Fallout 76       | Replenish AP with each kill
 Infuriating           | Melee and Unarmed                           | Fallout 76 (Cut) | 10% chance to knock back and frenzy the attacker on a successful block

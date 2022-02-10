@@ -357,6 +357,21 @@
             }
         },
         {
+            "text": "Medic's",
+            "type": "switcher",
+            "help": "Critical hits heal you and your companions (5% of maximum health)",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "MedicsWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Overpowering (Melee Only)",
             "type": "switcher",
             "help": "Power attacks deal 40% more damage",

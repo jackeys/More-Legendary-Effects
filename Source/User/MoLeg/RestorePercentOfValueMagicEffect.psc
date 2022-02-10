@@ -8,11 +8,14 @@ float Property PercentToRestore Auto Const Mandatory
 {What percentage of the base value should be restored per tick}
 
 float Property IntervalInSeconds = 1.0 Auto Const Mandatory
-{The number of real world seconds between each restoration tick, provided the effect is still active}
+{The number of real world seconds between each restoration tick, provided the effect is still active. A 0 means this will only happen once.}
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
 	Restore()
-	StartTimer(IntervalInSeconds)
+
+	if IntervalInSeconds > 0
+		StartTimer(IntervalInSeconds)
+	endIf
 EndEvent
 
 Event OnEffectFinish(Actor akTarget, Actor akCaster)

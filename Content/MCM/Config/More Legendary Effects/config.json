@@ -359,7 +359,7 @@
         {
             "text": "Medic's",
             "type": "switcher",
-            "help": "Critical hits heal you and your companions (5% of maximum health)",
+            "help": "Critical hits heal you and your companions (10% of maximum health)",
             "valueOptions": {
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",

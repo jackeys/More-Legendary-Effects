@@ -5,6 +5,7 @@
 Name                  | Armor Type                                  | Origin           | Description
 --------------------- | ------------------------------------------- | ---------------- | -----------
 Aristocrat's          | Normal and power armor                      | Fallout 76       | Grants increasing energy and damage resistance the higher your caps (up to +20) 
+Bracing               | Normal armor                                | Fallout 76       | Receive 15% less limb damage
 Dissipating           | Normal and power armor                      | Fallout 76       | Slowly regenerate radiation damage while not in combat
 Doctor's              | Normal and power armor                      | Fallout 76       | Stimpaks, RadAway, and Rad-X are 5% more effective
 Electrified           | Normal and power armor                      | Fallout 76       | 5% chance to deal 100 Energy damage to melee attackers

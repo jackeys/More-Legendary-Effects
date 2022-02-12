@@ -55,6 +55,9 @@ LegendaryItemQuestScript:LegendaryModRule Property VanguardsModRule Const Auto M
 bool Property WeightlessEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property WeightlessModRule Const Auto Mandatory
 
+bool Property BracingEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property BracingModRule Const Auto Mandatory
+
 ; Weapons
 
 bool Property LightweightEnabled = true Auto
@@ -139,6 +142,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Traveler's", TravelersEnabled, TravelersModRule)
 	UpdateModRule("Vanguard's", VanguardsEnabled, VanguardsModRule)
 	UpdateModRule("Weightless", WeightlessEnabled, WeightlessModRule)
+	UpdateModRule("Bracing", BracingEnabled, BracingModRule)
 	
 	; Weapons
 	UpdateModRule("Lightweight", LightweightEnabled, LightweightModRule)

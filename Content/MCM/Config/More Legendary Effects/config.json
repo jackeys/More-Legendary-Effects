@@ -23,6 +23,21 @@
             }
         },
         {
+            "text": "Bracing",
+            "type": "switcher",
+            "help": "Receive 15% less limb damage",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "BracingEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Dissipating",
             "type": "switcher",
             "help": "Slowly regenerate radiation damage while not in combat",

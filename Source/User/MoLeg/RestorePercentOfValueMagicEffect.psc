@@ -7,8 +7,10 @@ ActorValue Property Value Auto Const Mandatory
 float Property PercentToRestore Auto Const Mandatory
 {What percentage of the base value should be restored per tick}
 
-float Property IntervalInSeconds = 1.0 Auto Const Mandatory
+float Property IntervalInSeconds = 1.0 Auto Const
 {The number of real world seconds between each restoration tick, provided the effect is still active. A 0 means this will only happen once.}
+
+bool Property RestoreToCasterInstead = false Auto Const
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
 	Restore()
@@ -24,8 +26,13 @@ EndEvent
 
 Function Restore()
 	Actor target = GetTargetActor()
+
+	if RestoreToCasterInstead
+		target = GetCasterActor()
+	endIf
+
 	float amountToAdd = target.GetBaseValue(Value) * (PercentToRestore / 100.0)
-	debug.trace(self + " adding " + amountToAdd + " " + Value + " (" + PercentToRestore + "%)")
+	debug.trace(self + " adding " + amountToAdd + " " + Value + " (" + PercentToRestore + "%) to " + target)
 	target.RestoreValue(Value, amountToAdd)
 EndFunction
 

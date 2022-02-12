@@ -22,7 +22,7 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 		while i < playerFollowers.Length
 			Actor follower = playerFollowers[i]
 			debug.trace(self + " casting " + SpellToApply + " on player follower " + follower)
-			SpellToApply.Cast(akTarget, follower)
+			SpellToApply.Cast(akCaster, follower)
 			i += 1
 		endWhile
 		
@@ -32,8 +32,14 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 		i = 0
 		while i < numCompanions
 			Actor companion = ActiveCompanions.GetAt(i) as Actor
-			debug.trace(self + " casting " + SpellToApply + " on player companion " + companion)
-			SpellToApply.Cast(akTarget, companion)
+			; In the event this weapon is being wielded by the companion, cast the spell on the player instead
+			if companion == akCaster
+				debug.trace(self + " casting " + SpellToApply + " on player, since effect fired by " + companion)
+				SpellToApply.Cast(akCaster, Game.GetPlayer())
+			else
+				debug.trace(self + " casting " + SpellToApply + " on player companion " + companion)
+				SpellToApply.Cast(akCaster, companion)
+			endIf
 			i += 1
 		endWhile
 		
@@ -41,7 +47,7 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 			
 		if dogmeat
 			debug.trace(self + " casting " + SpellToApply + " on dog companion " + dogmeat)
-			SpellToApply.Cast(akTarget, dogmeat)
+			SpellToApply.Cast(akCaster, dogmeat)
 		endIf
 	else
 		debug.trace(self + " is not casting a spell on player followers because " + akCaster + " is not in the faction " + RequiredFaction)

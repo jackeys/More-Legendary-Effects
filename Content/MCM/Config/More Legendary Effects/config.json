@@ -447,6 +447,36 @@
             }
         },
         {
+            "text": "Traveler's (Guns Only)",
+            "type": "switcher",
+            "help": "The less you are carrying, the higher your accuracy and faster your reload speed (up to +50%)",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "TravelersGunEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
+            "text": "Traveler's (Melee Only)",
+            "type": "switcher",
+            "help": "The less you are carrying, the less Action Points power attacks cost (up to -50%)",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "TravelersMeleeEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Undeterred (Melee Only)",
             "type": "switcher",
             "help": "Take 40% less damage while power attacking",

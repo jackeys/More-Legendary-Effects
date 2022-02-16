@@ -62,6 +62,8 @@ Overpowering          | Melee and Unarmed                           | Fallout 76
 Riposting             | Melee and Unarmed                           | Fallout 76       | Reflects 50% of melee damage back while blocking
 Steady                | Melee and Unarmed                           | Fallout 76       | Deal 40% more damage while standing still
 Suppressor's          | All                                         | Fallout 76       | Reduce your target's damage output by 25% for 5 seconds
+Traveler's            | Ranged                                      | Original         | The less you are carrying, the higher your accuracy and faster your reload speed (up to +50%)
+Traveler's            | Melee and Unarmed                           | Original         | The less you are carrying, the less Action Points power attacks cost (up to -50%)
 Undeterred            | Melee and Unarmed                           | Fallout 76       | Take 40% less damage while power attacking
 Vampire's             | All                                         | Fallout 76       | Gain brief health regeneration when you hit an enemy
 
@@ -111,3 +113,20 @@ Carry Weight | Damage Increase
 90%          | 28%
 95%          | 32%
 100%         | 35%
+
+### Traveler's Effect
+
+**Requires F4SE**
+
+Carry Weight | Reload Speed Increase (Guns) | Accuracy Increase (Guns) | Power Attack AP Cost Reduction (Melee)
+------------ | ---------------------------- | ------------------------ | --------------------------------------
+50%          | 50%                          | 50%                      | 50%
+55%          | 45%                          | 45%                      | 45%
+60%          | 40%                          | 40%                      | 40%
+65%          | 35%                          | 35%                      | 35%
+70%          | 30%                          | 30%                      | 30%
+75%          | 25%                          | 25%                      | 25%
+80%          | 20%                          | 20%                      | 20%
+85%          | 15%                          | 15%                      | 15%
+90%          | 10%                          | 10%                      | 10%
+95%          | 5%                           | 5%                       | 5% 

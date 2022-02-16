@@ -112,6 +112,12 @@ LegendaryItemQuestScript:LegendaryModRule Property SuppressorsWeaponModRule Cons
 bool Property MedicsWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property MedicsWeaponModRule Const Auto Mandatory
 
+bool Property TravelersGunEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property TravelersGunModRule Const Auto Mandatory
+
+bool Property TravelersMeleeEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property TravelersMeleeModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	MergeNamingRules()
 	UpdateLegendaryModRules()
@@ -156,6 +162,8 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Ghost's (Weapon)", GhostsWeaponEnabled, GhostsWeaponModRule)
 	UpdateModRule("Suppressor's (Weapon)", SuppressorsWeaponEnabled, SuppressorsWeaponModRule)
 	UpdateModRule("Medic's (Weapon)", MedicsWeaponEnabled, MedicsWeaponModRule)
+	UpdateModRule("Traveler's (Gun)", TravelersGunEnabled, TravelersGunModRule)
+	UpdateModRule("Traveler's (Melee)", TravelersMeleeEnabled, TravelersMeleeModRule)
 	UpdateModRule("Steady (Weapon)", SteadyWeaponEnabled, SteadyWeaponModRule)
 	UpdateModRule("Overpowering (Weapon)", OverpoweringWeaponEnabled, OverpoweringWeaponModRule)
 	UpdateModRule("Undeterred (Weapon)", UndeterredWeaponEnabled, UndeterredWeaponModRule)

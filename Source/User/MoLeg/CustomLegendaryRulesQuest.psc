@@ -11,6 +11,8 @@ EndStruct
 
 NamingRuleMerge[] Property NamingRules Const Auto Mandatory
 
+InstanceNamingRules Property ArmorNamingRules Auto Const Mandatory
+
 ; Armor
 
 bool Property AristocratsEnabled = true Auto
@@ -132,6 +134,20 @@ Function MergeNamingRules()
 	EndWhile
 EndFunction
 
+bool PAttPNamingRulesMerged = false
+
+Function MergeNamingRulesForPAttP()
+	InstanceNamingRules PAttPNamingRules = Game.GetFormFromFile(0x0000088F, "Power Armor to the People.esp") as InstanceNamingRules
+
+	if PAttPNamingRules && !PAttPNamingRulesMerged
+		debug.trace(self + " injecting armor naming rules into Power Armor to the People")
+		PAttPNamingRules.MergeWith(ArmorNamingRules)
+		Quest PAttPTriggerMergeQuest = Game.GetFormFromFile(0x00000B6B, "Power Armor to the People.esp") as Quest
+		PAttPTriggerMergeQuest.Start()
+		PAttPNamingRulesMerged = true
+	endIf
+EndFunction
+
 Function UpdateLegendaryModRules()
 	; Armor
 	UpdateModRule("Aristocrat's (Armor)", AristocratsEnabled, AristocratsModRule)
@@ -170,6 +186,8 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Riposting (Weapon)", RipostingWeaponEnabled, RipostingWeaponModRule)
 	UpdateModRule("Infuriating (Weapon)", InfuriatingWeaponEnabled, InfuriatingWeaponModRule)
 	UpdateModRule("Inertial (Weapon)", InertialWeaponEnabled, InertialWeaponModRule)
+
+	MergeNamingRulesForPAttP()
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

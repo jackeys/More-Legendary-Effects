@@ -138,21 +138,33 @@ Function MergeNamingRules()
 		NamingRules[i].Destination.MergeWith(NamingRules[i].Source)
 		i += 1
 	EndWhile
-EndFunction
 
-bool PAttPNamingRulesMerged = false
-
-Function MergeNamingRulesForPAttP()
-	InstanceNamingRules PAttPNamingRules = Game.GetFormFromFile(0x0000088F, "Power Armor to the People.esp") as InstanceNamingRules
-
-	if PAttPNamingRules && !PAttPNamingRulesMerged
-		debug.trace(self + " injecting armor naming rules into Power Armor to the People")
-		PAttPNamingRules.MergeWith(ArmorNamingRules)
-		Quest PAttPTriggerMergeQuest = Game.GetFormFromFile(0x00000B6B, "Power Armor to the People.esp") as Quest
-		PAttPTriggerMergeQuest.Start()
-		PAttPNamingRulesMerged = true
+	if !MergeNamingRulesForPAttP()
+		debug.trace(self + " could not find Power Armor to the People - registering for game load event until we can")
+		RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
 	endIf
 EndFunction
+
+bool Function MergeNamingRulesForPAttP()
+	InstanceNamingRules PAttPNamingRules = Game.GetFormFromFile(0x0000088F, "Power Armor to the People.esp") as InstanceNamingRules
+	Quest PAttPTriggerMergeQuest = Game.GetFormFromFile(0x00000B6B, "Power Armor to the People.esp") as Quest
+
+	if PAttPNamingRules && PAttPTriggerMergeQuest
+		debug.trace(self + " injecting armor naming rules into Power Armor to the People")
+		PAttPNamingRules.MergeWith(ArmorNamingRules)
+		PAttPTriggerMergeQuest.Start()
+		return true
+	endIf
+
+	return false
+EndFunction
+
+Event Actor.OnPlayerLoadGame(Actor akSender)
+    if MergeNamingRulesForPAttP()
+		debug.trace(self + " unregistering for game load event")
+		UnregisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
+	endIf
+EndEvent
 
 Function UpdateLegendaryModRules()
 	; Armor
@@ -192,8 +204,6 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Riposting (Weapon)", RipostingWeaponEnabled, RipostingWeaponModRule)
 	UpdateModRule("Infuriating (Weapon)", InfuriatingWeaponEnabled, InfuriatingWeaponModRule)
 	UpdateModRule("Inertial (Weapon)", InertialWeaponEnabled, InertialWeaponModRule)
-
-	MergeNamingRulesForPAttP()
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

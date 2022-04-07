@@ -146,7 +146,7 @@ Function MergeNamingRules()
 EndFunction
 
 bool Function MergeNamingRulesForPAttP()
-	InstanceNamingRules PAttPNamingRules = Game.GetFormFromFile(0x0000088F, "Power Armor to the People.esp") as InstanceNamingRules
+	InstanceNamingRules PAttPNamingRules = Game.GetFormFromFile(0x00000B71, "Power Armor to the People.esp") as InstanceNamingRules
 	Quest PAttPTriggerMergeQuest = Game.GetFormFromFile(0x00000B6B, "Power Armor to the People.esp") as Quest
 
 	if PAttPNamingRules && PAttPTriggerMergeQuest

@@ -432,6 +432,21 @@
             }
         },
         {
+            "text": "Stockpiler's (Guns Only)",
+            "type": "switcher",
+            "help": "10% chance to get a full clip of ammo when reloading",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "StockpilersGunEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Suppressor's",
             "type": "switcher",
             "help": "Reduce your target's damage output by 25% for 5 seconds",

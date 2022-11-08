@@ -126,6 +126,9 @@ LegendaryItemQuestScript:LegendaryModRule Property TravelersGunModRule Const Aut
 bool Property TravelersMeleeEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property TravelersMeleeModRule Const Auto Mandatory
 
+bool Property StockpilersGunEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property StockpilersGunModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	MergeNamingRules()
 	UpdateLegendaryModRules()
@@ -204,6 +207,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Riposting (Weapon)", RipostingWeaponEnabled, RipostingWeaponModRule)
 	UpdateModRule("Infuriating (Weapon)", InfuriatingWeaponEnabled, InfuriatingWeaponModRule)
 	UpdateModRule("Inertial (Weapon)", InertialWeaponEnabled, InertialWeaponModRule)
+	UpdateModRule("Stockpiler's (Gun)", StockpilersGunEnabled, StockpilersGunModRule)
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

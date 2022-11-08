@@ -61,6 +61,7 @@ Medic's               | All                                         | Fallout 76
 Overpowering          | Melee and Unarmed                           | Fallout 76       | Power attacks do 40% more damage
 Riposting             | Melee and Unarmed                           | Fallout 76       | Reflects 50% of melee damage back while blocking
 Steady                | Melee and Unarmed                           | Fallout 76       | Deal 40% more damage while standing still
+Stockpiler's          | Ranged                                      | Original         | 10% chance to get a full clip of ammo when reloading
 Suppressor's          | All                                         | Fallout 76       | Reduce your target's damage output by 25% for 5 seconds
 Traveler's            | Ranged                                      | Original         | The less you are carrying, the higher your accuracy and faster your reload speed (up to +50%)
 Traveler's            | Melee and Unarmed                           | Original         | The less you are carrying, the less Action Points power attacks cost (up to -50%)

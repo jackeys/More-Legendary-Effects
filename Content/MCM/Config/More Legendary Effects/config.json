@@ -387,6 +387,21 @@
             }
         },
         {
+            "text": "Mobilizing (Heavy Guns Only)",
+            "type": "switcher",
+            "help": "No movement penalty, and can be drawn faster",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "MobilizingWeaponEnabled"
+            },
+            "action": {
+                "type": "CallFunction",
+                "form": "More Legendary Effects.esp|808",
+                "function": "UpdateLegendaryModRules"
+            }
+        },
+        {
             "text": "Overpowering (Melee Only)",
             "type": "switcher",
             "help": "Power attacks deal 40% more damage",

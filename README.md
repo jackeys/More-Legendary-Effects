@@ -76,6 +76,7 @@ Infuriating           | Melee and Unarmed                           | Fallout 76
 Juggernaut's          | All                                         | Fallout 76       | Deal increasing damage the higher your health (up to +35%)
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less
 Medic's               | All                                         | Fallout 76       | Critical hits heal you and your companions (10% of maximum health)
+Mobilizing            | Heavy Weapons                               | Original         | Greatly reduced movement penalty and 20% faster reload speed
 Overpowering          | Melee and Unarmed                           | Fallout 76       | Power attacks do 40% more damage
 Riposting             | Melee and Unarmed                           | Fallout 76       | Reflects 50% of melee damage back while blocking
 Steady                | Melee and Unarmed                           | Fallout 76       | Deal 40% more damage while standing still

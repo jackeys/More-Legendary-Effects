@@ -27,22 +27,40 @@ Weightless            | Normal armor                                | Fallout 76
 **Requires F4SE**
 
 Resistances are added at the following carrying capacity percentages:
-* 80% - +4
-* 85% - +8
-* 90% - +12
-* 95% - +16
-* 100% or more - +20
+
+Carry Weight | Damage and Energy Resistance Increase
+------------ | -------------------------------------
+50%          | 2
+55%          | 3
+60%          | 4
+65%          | 6
+70%          | 8
+75%          | 10
+80%          | 12
+85%          | 14
+90%          | 16
+95%          | 18
+100%         | 20
 
 ### Traveler's Effect
 
 **Requires F4SE**
 
 Movement speed increases at the following carrying capacity percentages:
-* 70% - +2% movement speed
-* 65% - +4% movement speed
-* 60% - +6% movement speed
-* 55% - +8% movement speed
-* 50% or lower - +10% movement speed
+
+Carry Weight | Speed Increase
+------------ | ---------------
+50%          | 10%
+55%          | 9%
+60%          | 8%
+65%          | 7%
+70%          | 6%
+75%          | 5%
+80%          | 4%
+85%          | 3%
+90%          | 2%
+95%          | 1%
+100%         | 0%
 
 ## Weapons
 
@@ -131,3 +149,4 @@ Carry Weight | Reload Speed Increase (Guns) | Accuracy Increase (Guns) | Power A
 85%          | 15%                          | 15%                      | 15%
 90%          | 10%                          | 10%                      | 10%
 95%          | 5%                           | 5%                       | 5% 
+100%         | 0%                           | 0%                       | 0%

@@ -520,6 +520,20 @@
                 "form": "More Legendary Effects.esp|808",
                 "function": "UpdateLegendaryModRules"
             }
+        },
+        {
+            "text": "Advanced Settings",
+            "type": "section"
+        },
+        {
+            "text": "Expand Arrays If Needed to Fit All Legendary Effects",
+            "type": "switcher",
+            "help": "Requires LL_FourPlay from the installer - you would have been prompted if you need this",
+            "valueOptions": {
+                "sourceType": "PropertyValueBool",
+                "sourceForm": "More Legendary Effects.esp|808",
+                "propertyName": "AllowArrayExpansion"
+            }
         }
     ]
 }

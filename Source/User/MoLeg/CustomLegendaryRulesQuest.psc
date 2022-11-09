@@ -102,8 +102,8 @@ LegendaryItemQuestScript:LegendaryModRule Property UndeterredWeaponModRule Const
 bool Property RipostingWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property RipostingWeaponModRule Const Auto Mandatory
 
-bool Property InfuriatingWeaponEnabled = true Auto
-LegendaryItemQuestScript:LegendaryModRule Property InfuriatingWeaponModRule Const Auto Mandatory
+bool Property DisorientingWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property DisorientingWeaponModRule Const Auto Mandatory
 
 bool Property InertialWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property InertialWeaponModRule Const Auto Mandatory
@@ -205,7 +205,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Overpowering (Weapon)", OverpoweringWeaponEnabled, OverpoweringWeaponModRule)
 	UpdateModRule("Undeterred (Weapon)", UndeterredWeaponEnabled, UndeterredWeaponModRule)
 	UpdateModRule("Riposting (Weapon)", RipostingWeaponEnabled, RipostingWeaponModRule)
-	UpdateModRule("Infuriating (Weapon)", InfuriatingWeaponEnabled, InfuriatingWeaponModRule)
+	UpdateModRule("Disorienting (Weapon)", DisorientingWeaponEnabled, DisorientingWeaponModRule)
 	UpdateModRule("Inertial (Weapon)", InertialWeaponEnabled, InertialWeaponModRule)
 	UpdateModRule("Stockpiler's (Gun)", StockpilersGunEnabled, StockpilersGunModRule)
 EndFunction

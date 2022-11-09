@@ -327,13 +327,13 @@
             }
         },
         {
-            "text": "Infuriating (Melee Only)",
+            "text": "Disorienting (Melee Only)",
             "type": "switcher",
             "help": "10% chance to knock back and frenzy the attacker on a successful block",
             "valueOptions": {
                 "sourceType": "PropertyValueBool",
                 "sourceForm": "More Legendary Effects.esp|808",
-                "propertyName": "InfuriatingWeaponEnabled"
+                "propertyName": "DisorientingWeaponEnabled"
             },
             "action": {
                 "type": "CallFunction",

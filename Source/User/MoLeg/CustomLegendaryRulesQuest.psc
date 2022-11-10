@@ -173,37 +173,32 @@ Event Actor.OnPlayerLoadGame(Actor akSender)
 EndEvent
 
 Function UpdateLegendaryModRules()
-	; Armor
+	;--------------- Armor ---------------
 	UpdateModRule("Aristocrat's (Armor)", AristocratsEnabled, AristocratsModRule)
 	UpdateModRule("Dissipating", DissipatingEnabled, DissipatingModRule)
 	UpdateModRule("Doctor's", DoctorsEnabled, DoctorsModRule)
 	UpdateModRule("Electrified", ElectrifiedEnabled, ElectrifiedModRule)
 	UpdateModRule("Hardy", HardyEnabled, HardyModRule)
 	UpdateModRule("Hazmat", HazmatEnabled, HazmatModRule)
-	UpdateModRule("Hoarder's", HoardersEnabled, HoardersModRule)
 	UpdateModRule("Nocturnal", NocturnalEnabled, NocturnalModRule)
 	UpdateModRule("Regenerating", RegeneratingEnabled, RegeneratingModRule)
 	UpdateModRule("Sneaking", SneakingEnabled, SneakingModRule)
 	UpdateModRule("Toxic", ToxicEnabled, ToxicModRule)
-	UpdateModRule("Traveler's", TravelersEnabled, TravelersModRule)
 	UpdateModRule("Vanguard's", VanguardsEnabled, VanguardsModRule)
 	UpdateModRule("Weightless", WeightlessEnabled, WeightlessModRule)
 	UpdateModRule("Bracing", BracingEnabled, BracingModRule)
 	
-	; Weapons
+	;--------------- Weapons ---------------
 	UpdateModRule("Lightweight", LightweightEnabled, LightweightModRule)
 	UpdateModRule("Swift", SwiftEnabled, SwiftModRule)
 	UpdateModRule("Aristocrat's (Weapon)", AristocratsWeaponEnabled, AristocratsWeaponModRule)
 	UpdateModRule("Basher's (Weapon)", BashersWeaponEnabled, BashersWeaponModRule)
 	UpdateModRule("Executioner's (Weapon)", ExecutionersWeaponEnabled, ExecutionersWeaponModRule)
 	UpdateModRule("Juggernaut's (Weapon)", JuggernautsWeaponEnabled, JuggernautsWeaponModRule)
-	UpdateModRule("Hoarder's (Weapon)", HoardersWeaponEnabled, HoardersWeaponModRule)
 	UpdateModRule("Vampire's (Weapon)", VampiresWeaponEnabled, VampiresWeaponModRule)
 	UpdateModRule("Ghost's (Weapon)", GhostsWeaponEnabled, GhostsWeaponModRule)
 	UpdateModRule("Suppressor's (Weapon)", SuppressorsWeaponEnabled, SuppressorsWeaponModRule)
 	UpdateModRule("Medic's (Weapon)", MedicsWeaponEnabled, MedicsWeaponModRule)
-	UpdateModRule("Traveler's (Gun)", TravelersGunEnabled, TravelersGunModRule)
-	UpdateModRule("Traveler's (Melee)", TravelersMeleeEnabled, TravelersMeleeModRule)
 	UpdateModRule("Steady (Weapon)", SteadyWeaponEnabled, SteadyWeaponModRule)
 	UpdateModRule("Overpowering (Weapon)", OverpoweringWeaponEnabled, OverpoweringWeaponModRule)
 	UpdateModRule("Undeterred (Weapon)", UndeterredWeaponEnabled, UndeterredWeaponModRule)
@@ -212,6 +207,24 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Mobilizing (Weapon)", MobilizingWeaponEnabled, MobilizingWeaponModRule)
 	UpdateModRule("Inertial (Weapon)", InertialWeaponEnabled, InertialWeaponModRule)
 	UpdateModRule("Stockpiler's (Gun)", StockpilersGunEnabled, StockpilersGunModRule)
+	
+	; F4SE Required
+	bool f4seVersionSupportsInventoryWeight = f4seVersionSupportsInventoryWeight()
+	
+	if !f4seVersionSupportsInventoryWeight
+		debug.trace(self + " F4SE is not installed or out of date - disabling effects that require F4SE 0.4.2 or higher")
+	endIf
+	
+	UpdateModRule("Hoarder's", HoardersEnabled && f4seVersionSupportsInventoryWeight, HoardersModRule)
+	UpdateModRule("Traveler's", TravelersEnabled && f4seVersionSupportsInventoryWeight, TravelersModRule)
+	UpdateModRule("Traveler's (Gun)", TravelersGunEnabled && f4seVersionSupportsInventoryWeight, TravelersGunModRule)
+	UpdateModRule("Traveler's (Melee)", TravelersMeleeEnabled && f4seVersionSupportsInventoryWeight, TravelersMeleeModRule)
+	UpdateModRule("Hoarder's (Weapon)", HoardersWeaponEnabled && f4seVersionSupportsInventoryWeight, HoardersWeaponModRule)
+EndFunction
+
+bool Function f4seVersionSupportsInventoryWeight()
+	; F4SE 0.4.2 added the function required for getting inventory weight
+	return F4SE.GetVersion() >= 1 || F4SE.GetVersionMinor() > 4 || (F4SE.GetVersionMinor() == 4 && F4SE.GetVersionBeta() >= 2)
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

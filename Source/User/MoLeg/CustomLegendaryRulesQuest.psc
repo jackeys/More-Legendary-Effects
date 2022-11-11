@@ -7,11 +7,15 @@ LegendaryItemQuestScript Property LegendaryItemQuest const auto mandatory
 Struct NamingRuleMerge
 	InstanceNamingRules Source
 	InstanceNamingRules Destination
+	{If a destination isn't provided, the DestinationFile and DestinationFormId must be provided so that the form can be looked up}
+	String DestinationFile
+	Int DestinationFormId
 EndStruct
 
 NamingRuleMerge[] Property NamingRules Const Auto Mandatory
+NamingRuleMerge[] Property NamingRules_PATTP Const Auto Mandatory
 
-InstanceNamingRules Property ArmorNamingRules Auto Const Mandatory
+InstanceNamingRules Property PowerArmorNamingRules Auto Const Mandatory
 
 Message Property RemoveNukaWorldRulesMessage Auto Const Mandatory
 Message Property ArrayExpansionMessage Auto Const Mandatory
@@ -133,22 +137,35 @@ bool Property MobilizingWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property MobilizingWeaponModRule Const Auto Mandatory
 
 Event OnQuestInit()
-	MergeNamingRules()
+	MergeAllNamingRules()
 	UpdateLegendaryModRules()
 EndEvent
 
-Function MergeNamingRules()
-	int i = 0
-	while i < NamingRules.Length
-		debug.trace(self + " merging naming rules - Source: " + NamingRules[i].Source + " | Destination: " + NamingRules[i].Destination)
-		NamingRules[i].Destination.MergeWith(NamingRules[i].Source)
-		i += 1
-	EndWhile
+Function MergeAllNamingRules()
+	MergeNamingRules(NamingRules)
 
 	if !MergeNamingRulesForPAttP()
 		debug.trace(self + " could not find Power Armor to the People - registering for game load event until we can")
 		RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
 	endIf
+EndFunction
+
+Function MergeNamingRules(NamingRuleMerge[] akRules)
+	int i = 0
+	while i < akRules.Length
+		InstanceNamingRules destination = akRules[i].Destination
+
+		if destination == None
+			debug.trace(self + " Looking up form " + akRules[i].DestinationFormId + " in file " + akRules[i].DestinationFile + " for naming merge destination")
+			destination = Game.GetFormFromFile(akRules[i].DestinationFormId, akRules[i].DestinationFile) as InstanceNamingRules
+		endIf
+
+		if destination
+			debug.trace(self + " merging naming rules - Source: " + akRules[i].Source + " | Destination: " + destination)
+			destination.MergeWith(akRules[i].Source)
+		endIf
+		i += 1
+	EndWhile
 EndFunction
 
 bool Function MergeNamingRulesForPAttP()
@@ -157,8 +174,9 @@ bool Function MergeNamingRulesForPAttP()
 
 	if PAttPNamingRules && PAttPTriggerMergeQuest
 		debug.trace(self + " injecting armor naming rules into Power Armor to the People")
-		PAttPNamingRules.MergeWith(ArmorNamingRules)
+		PAttPNamingRules.MergeWith(PowerArmorNamingRules)
 		PAttPTriggerMergeQuest.Start()
+		MergeNamingRules(NamingRules_PATTP)
 		return true
 	endIf
 

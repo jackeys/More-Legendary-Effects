@@ -72,7 +72,7 @@ Executioner's         | All                                         | Fallout 76
 Ghost's               | Ranged                                      | Fallout 76       | Hits have a 10% chance to generate a Stealth Field for 2 seconds
 Hoarder's             | All                                         | Original         | Deal increasing damage the closer you are to your carrying capacity (up to +35%)
 Inertial              | All                                         | Fallout 76       | Replenish AP with each kill
-Infuriating           | Melee and Unarmed                           | Fallout 76 (Cut) | 10% chance to knock back and frenzy the attacker on a successful block
+Disorienting          | Melee and Unarmed                           | Original         | 10% chance to knock back and frenzy the attacker on a successful block
 Juggernaut's          | All                                         | Fallout 76       | Deal increasing damage the higher your health (up to +35%)
 Lightweight           | All                                         | Fallout 76       | Weighs 90% less
 Medic's               | All                                         | Fallout 76       | Critical hits heal you and your companions (10% of maximum health)

@@ -17,6 +17,8 @@ NamingRuleMerge[] Property NamingRules_PATTP Const Auto Mandatory
 
 InstanceNamingRules Property PowerArmorNamingRules Auto Const Mandatory
 
+GlobalVariable Property NamingMergesEnabled Auto Const Mandatory
+
 Message Property RemoveNukaWorldRulesMessage Auto Const Mandatory
 Message Property ArrayExpansionMessage Auto Const Mandatory
 
@@ -142,6 +144,11 @@ Event OnQuestInit()
 EndEvent
 
 Function MergeAllNamingRules()
+	if NamingMergesEnabled.GetValueInt() == 0
+		debug.trace(self + " skipping name merges since they are disabled")
+		return
+	endIf
+
 	MergeNamingRules(NamingRules)
 
 	if !MergeNamingRulesForPAttP()

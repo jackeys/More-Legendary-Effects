@@ -174,9 +174,17 @@ bool Property MobilizingWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property MobilizingWeaponModRule Const Auto Mandatory
 MiscObject Property MobilizingWeaponModItem = None Const Auto Mandatory
 
+bool Property HasRunBefore = true auto
+{Whether the rules updates have been run before. Start at true because the first release didn't have this, so we'll set it to false when we init the quest.}
+
+Event OnInit()
+	HasRunBefore = false
+EndEvent
+
 Event OnQuestInit()
 	MergeAllNamingRules()
 	UpdateLegendaryModRules()
+	HasRunBefore = true
 EndEvent
 
 Function MergeAllNamingRules()
